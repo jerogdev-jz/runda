@@ -1,0 +1,24 @@
+@use '../../../styles/variables' as v;
+
+.header_principal {
+    background-color: v.$c-noActivo;
+    color: v.$c-textoClaro;
+}
+
+.contenedor_header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-block: 1rem;
+        &_nav ul {
+            display: flex;
+            gap: 1rem;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        &_acciones {
+            display: flex;
+            gap: 1rem;
+        }
+    }
