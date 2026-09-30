@@ -1,0 +1,25 @@
+@use 'variables' as v;
+
+// Generales
+
+body {
+    background-color: v.$c-fondoGral;
+    color: v.$c-noActivo;
+    font-family: arial, sans-serif;
+    min-height: 100dvh;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button, input, select, textarea {
+    font-family: inherit;
+}
