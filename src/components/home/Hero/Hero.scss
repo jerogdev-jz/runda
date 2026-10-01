@@ -1,0 +1,120 @@
+@use '../../../styles/variables' as v;
+
+.contenedor_hero {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    min-height: 85dvh;
+
+    &_informacion {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+
+        &_eyebrow {
+            .heroEyebrow {
+                color: v.$c-enfasis;
+                font-size: 1.5rem;
+            }           
+        }
+
+        &_tituloHero {
+            .heroTitulo {
+                color: v.$c-noActivo;
+                font-size: 3.5rem;
+                }
+            }
+
+        &_textoHero {
+            .heroTexto {
+                font-size: 1.5rem;
+                margin-block: 1rem;
+            }
+        }
+
+        &_botonHero {
+            width: 100%;
+            padding-top: 1rem;
+            .heroBoton {
+                background-color: v.$c-identidad;
+                color: v.$c-textoClaro;
+                border: none;
+                border-radius: 20px;
+                padding: 1rem 2rem;
+                font-size: 1.2rem;
+                cursor: pointer;
+            }
+        }
+    }
+
+    &_visual {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .placeholder_visual {
+            background-color: v.$c-tarjetas;
+            height: 400px;
+            width: 100%;
+            border-radius: 20px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        min-height: 0;
+
+        &_informacion {
+            padding-top: 2rem;
+
+            &_tituloHero {
+            .heroTitulo {
+                margin: 1rem 0;
+                }
+            }
+            &_botonHero {
+            padding-top: 1rem;
+            }
+        }
+
+        &_visual {
+            padding-top: 1rem;
+
+            .placeholder_visual {
+                height: auto;
+                aspect-ratio: 4/3; 
+            }
+        }
+        
+    }
+
+    @media (max-width: 425px) {
+
+        &_informacion {
+  
+            &_eyebrow {
+            .heroEyebrow {
+                font-size: 1rem;
+                }           
+            }
+
+            &_tituloHero {
+            .heroTitulo {
+                font-size: 3.2rem;
+                }
+            }
+            &_botonHero {
+            width: 100%;
+
+            .heroBoton {
+                width: 100%;
+            }
+        }
+    }
+        
+    }
+}
+
