@@ -1,0 +1,86 @@
+@use '../../../styles/variables' as v;
+
+.categorias {
+    display: flex;
+    flex-direction: column;
+    &_titulo {
+        .tituloCategorias {
+            color: v.$c-noActivo;
+            font-size: 1.5rem;
+        }
+    }
+    &_tarjetas {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 2rem;
+        .tarjetasCategorias {
+            aspect-ratio: 4/3;
+            border-radius: 20px;
+            background-color: v.$c-tarjetas;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .iconoTarjetasCategorias {
+                background-color: v.$c-noActivo;
+                min-height: 60px;
+                min-width: 60px;
+                width: 40%;
+                aspect-ratio: 1/1;
+                border-radius: 5px;
+            }
+            .textoTarjetasCategorias{
+                .textoTarCat {
+                    color: v.$c-textoClaro;
+                    font-weight: 600;
+                }
+            }
+        }
+        .enfasis {
+            background-color: v.$c-enfasis;
+            .textoTarjetasCategorias{
+                .textoTarCat {
+                    color: v.$c-noActivo;
+                }
+            }
+        }
+    }
+
+     @media (max-width: 768px) {
+        &_tarjetas {
+        grid-template-columns: repeat(2, minmax(100px, 1fr));
+        gap: 2rem;
+        .tarjetasCategorias {
+            aspect-ratio: 1/1;
+            .iconoTarjetasCategorias {
+                width: 60%;
+            }
+            .textoTarjetasCategorias{
+                .textoTarCat {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+        }
+    }
+
+    @media (max-width: 425px) {
+        &_tarjetas {
+        gap: 1rem;
+        .tarjetasCategorias {
+            aspect-ratio: 1/1;
+            .iconoTarjetasCategorias {
+                width: 40%;
+            }
+            .textoTarjetasCategorias{
+                .textoTarCat {
+                    font-size: 1rem;
+                }
+            }
+        }
+        }
+    }
+
+
+
+}
