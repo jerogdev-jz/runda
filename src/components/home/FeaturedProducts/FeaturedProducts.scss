@@ -1,0 +1,181 @@
+@use '../../../styles/variables' as v;
+
+.seleccionados {
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
+
+    &_encabezado {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+
+        &_eyebrow {
+            background-color: v.$c-noActivo;
+            border-radius: 15px;
+            padding: .5rem;
+            color: v.$c-enfasis;
+
+            .EyebrowSelec {
+            padding: 1rem 3rem 0 .5rem ;
+            font-size: .8rem;
+            font-weight: 600;
+            }
+        }
+
+        &_titulo {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-end;
+            padding: 1.5rem 0;
+
+            .tituloSeleccionados {
+                font-size: 1.8rem;
+                margin: 0;
+                padding: 0 1.5rem 0 0;
+                line-height: 90%;
+            }
+
+            .spanTituloSelec {
+                font-size: .8rem;
+            }
+        }
+
+        &_botones {
+            .listaBotonesSelec {
+                display: flex;
+                gap: 1rem;
+                flex-wrap: wrap;
+                list-style: none;
+                padding: 0;
+                margin: .2rem;
+
+                .selectorListaBotonesSelec {
+                    .botonSelLisBotSelec {
+                        background-color: v.$c-noActivo;
+                        padding: .8rem;
+                        border: none;
+                        border-radius: 30px;
+                        color: v.$c-textoClaro;
+                        font-size: .8rem;
+                        font-weight: 600;
+                    }
+
+                    .enfasis {
+                    background-color: v.$c-enfasis;
+                    color: v.$c-noActivo;
+                    }
+                }
+
+                
+            }
+        }
+    }
+
+    &_grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        grid-auto-rows: 1fr;
+        gap: 2rem;
+        padding: 1rem 0;
+
+        .tarjetaSeleccionados {
+            padding: .5rem ;
+            height: 100%;
+            border-radius: 20px;
+            background-color: v.$c-tarjetas;
+            display: flex;
+            flex-direction: column;
+            color: v.$c-textoClaro;
+
+            .placeholderTarjetasSeleccionado {
+                background-color: v.$c-textoClaro;
+                aspect-ratio: 16/9;
+                border-radius: 20px;
+            }
+
+            .tituloTarSelec {
+                margin: 1rem 0;
+            }
+
+            .descripcionTarSelec {
+                margin: 0;
+            }
+
+            .precioTarSelec {
+                margin: 1rem 0;
+                font-weight: 700;
+            }
+
+            .botonTarSelec {
+                width: 100%;
+                display: flex;
+                margin-top: auto;
+                .verBotonTarSelect {
+                    background-color: v.$c-identidad;
+                    color: v.$c-textoClaro;
+                    border: none;
+                    border-radius: 20px;
+                    padding: .8rem ;
+                    width: 100%;
+                    font-size: 1rem;
+                    cursor: pointer;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .seleccionados_grid {
+            grid-template-columns: repeat(2, minmax(100px, 1fr));
+            gap: 1rem;
+        }
+    }
+
+    @media (max-width: 425px) {
+        &_encabezado {
+            &_titulo {
+                flex-direction: column;
+                align-items: flex-start;
+
+                .tituloSeleccionados {
+                    font-size: 2rem;
+                    margin-bottom: 1rem;
+                    padding: 0 1.5rem 0 0;
+                    line-height: 100%;
+                }
+
+                .spanTituloSelec {
+                    font-size: 1rem;
+                }
+            }
+        }
+
+        &_grid {
+            .tarjetaSeleccionados{
+                .placeholderTarjetasSeleccionado {
+                    aspect-ratio: 4/3;
+                }
+                .descripcionTarSelec {
+                    font-size: .8rem;
+                }
+
+                .botonTarSelec {
+                    .verBotonTarSelect {
+                        font-size: .8rem;
+                    }
+                }
+            }
+        }
+
+        
+    }
+     @media (max-width: 375px) {
+        .seleccionados_grid {
+                grid-template-columns: repeat(1, minmax(100px, 1fr));
+                gap: 1rem;
+            }        
+    }
+}
