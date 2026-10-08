@@ -1,0 +1,79 @@
+@use '../../../styles/variables' as v;
+
+.coleccionDestacada {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+    background-color: v.$c-identidad;
+    border-radius: 20px;
+    padding: 0 1rem;
+
+    &_info {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        color: v.$c-textoClaro;
+        padding: 2rem 0;
+
+        .eyebrow_ColDest {
+            background-color: #719a09;
+            border-radius: 20px;
+            font-weight: 700;
+            width: fit-content;
+            padding:  .2rem 1rem;
+        }
+
+        .titulo_ColDest {
+            font-size: 4rem;
+            margin: 1rem 0;
+        }
+
+        .descripcion_ColDest {
+            font-size: 1.3rem;
+        }
+
+        .enlace_ColDest {
+            margin-top: auto;
+            padding-bottom: 1rem;
+        }
+    }
+
+    &_visual {
+        display: flex;
+        justify-content: center;
+        .placeholderDestacada {
+                background-color: v.$c-textoClaro;
+                width: 90%;
+                aspect-ratio: 16/9;
+                border-radius: 20px;
+                margin: 1rem auto;
+            }
+    }
+
+    @media (max-width: 768px) {
+            grid-template-columns: repeat(1, minmax(100px, 1fr));
+
+            &_visual {
+                .placeholderDestacada {
+                        width: 100%;
+                    }
+            }
+	}
+    @media (max-width: 425px) {
+        padding: 0 .5rem;
+
+        .titulo_ColDest {
+            font-size: 3rem;
+        }
+         &_visual {
+                .placeholderDestacada {
+                        width: 100%;
+                        margin: .5rem auto;
+                    }
+            }
+	}
+    @media (max-width: 375px) {
+         .titulo_ColDest {
+            font-size: 2.5rem;
+        }
+    }
+}
