@@ -1,0 +1,51 @@
+@use '../../../styles/variables' as v;
+
+.descubreMas {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0;
+
+    .eyebrowDescMas {
+        color: v.$c-tarjetas;
+        font-weight: 700;
+    }
+
+    &_contenedorTarjetas {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(100px, 1fr));
+        gap: 2rem;
+        margin: 1rem 0;
+
+        .tarjetaDescMas {
+            background-color: v.$c-tarjetas;
+            border-radius: 20px;
+            aspect-ratio: 16/9;
+            padding: 1rem;
+            color: v.$c-textoClaro;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .subcontenedorTarDescMas {
+                display: flex;
+                align-items: center;
+
+                .copyTarDescMas {
+                    margin: 0 1rem 0 0;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        &_contenedorTarjetas {
+            grid-template-columns: repeat(2, minmax(100px, 1fr));
+            gap: 1rem;
+        }
+	}
+    @media (max-width: 425px) {
+        &_contenedorTarjetas {
+            grid-template-columns: repeat(1, minmax(100px, 1fr));
+        }
+    }
+}
