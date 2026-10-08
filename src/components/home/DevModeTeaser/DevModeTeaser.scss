@@ -1,0 +1,67 @@
+@use '../../../styles/variables' as v;
+
+.modoDev {
+    background-color: v.$c-tarjetas;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+    border-radius: 20px;
+    padding: 1rem;
+    
+    &_info {
+        color: v.$c-textoClaro;
+
+        .eyebrowModoDev {
+            color: v.$c-enfasis;
+            font-weight: 700;      
+        }
+
+        .tituloModoDev {
+            font-size: 4rem; 
+            margin: 1rem 0;
+        }
+
+        .botonModoDev {
+            border: none;
+            border-radius: 20px;
+            background-color: v.$c-enfasis;
+            padding: .8rem 1.5rem;
+            color: v.$c-tarjetas;
+            font-weight: 600;
+        }
+    }
+
+    .modoDev_visual {
+        display: flex;
+        justify-content: center;
+        .placeholderModoDev {
+            background-color: v.$c-textoClaro;
+            width: 90%;
+            aspect-ratio: 2.39/1;
+            border-radius: 20px;
+            margin: 1rem auto;
+        }
+    }
+
+    @media (max-width: 768px) {
+        grid-template-columns: repeat(1, minmax(100px, 1fr));
+        gap: 1rem;
+
+        .modoDev_visual {
+            .placeholderModoDev {
+                width: 100%;
+                aspect-ratio: 2.39/1;
+                margin: .5rem auto;
+            }
+        }
+	}
+    @media (max-width: 425px) {
+        .tituloModoDev {
+            font-size: 3rem; 
+        }
+    }
+    @media (max-width: 375px) {
+        .tituloModoDev {
+            font-size: 2rem; 
+        }
+    }
+}
