@@ -5,6 +5,7 @@ import FeaturedProducts from './components/home/FeaturedProducts/FeaturedProduct
 import FeaturedCollection from './components/home/FeaturedCollection/FeaturedCollection';
 import DiscoverMore from './components/home/DiscoverMore/DiscoverMore';
 import DevModeTeaser from './components/home/DevModeTeaser/DevModeTeaser';
+import Footer from './components/layout/Footer/Footer';
 
 function App() {
   
@@ -17,7 +18,7 @@ function App() {
       <FeaturedCollection />
       <DiscoverMore />
       <DevModeTeaser />
-      <h1>Runda</h1>
+      <Footer />
     </>
   )
 }
