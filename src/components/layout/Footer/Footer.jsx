@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import './Footer.scss';
 
 function Footer() {
@@ -12,9 +14,9 @@ function Footer() {
                         </div>
                         <div className='PiePagina_enlacesEcommerce'>
                             <ul className='listaEnlacesPiePag'>
-                                <li><a href='#'>Inicio</a></li>
-                                <li><a href='#'>Catalogo</a></li>
-                                <li><a href='#'>Categorias</a></li>
+                                <li><Link to="/">Inicio</Link></li>
+                                <li><Link to="/catalogo">Catalogo</Link></li>
+                                <li><Link to="/catalogo">Categorias</Link></li>
                             </ul>
                         </div>
                         <div className='PiePagina_enlacesDev'>

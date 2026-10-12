@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import './Header.scss';
 
 function Header() {
@@ -10,9 +12,9 @@ function Header() {
             <div className="contenedor_header_nav">
                 <nav>
                     <ul>
-                        <li><a href="#">Inicio</a></li>
-                        <li><a href="#">Catálogo</a></li>
-                        <li><a href="#">Categorías</a></li>
+                        <li><Link to="/">Inicio</Link></li>
+                        <li><Link to="/catalogo">Catálogo</Link></li>
+                        <li><Link to="/catalogo">Categorías</Link></li>
                     </ul>
                 </nav>
             </div>
@@ -23,9 +25,7 @@ function Header() {
                     </button>
                 </div>
                 <div className="contenedor_header_acciones_btnCarrito">
-                    <button type="button">
-                        Carrito
-                    </button>
+                    <Link to="/carrito">Carrito</Link>
                 </div>
             </div>
         </div>    
