@@ -79,52 +79,6 @@
         grid-auto-rows: 1fr;
         gap: 2rem;
         padding: 1rem 0;
-
-        .tarjetaSeleccionados {
-            padding: .5rem ;
-            height: 100%;
-            border-radius: 20px;
-            background-color: v.$c-tarjetas;
-            display: flex;
-            flex-direction: column;
-            color: v.$c-textoClaro;
-
-            .placeholderTarjetasSeleccionado {
-                background-color: v.$c-textoClaro;
-                aspect-ratio: 16/9;
-                border-radius: 20px;
-            }
-
-            .tituloTarSelec {
-                margin: 1rem 0;
-            }
-
-            .descripcionTarSelec {
-                margin: 0;
-            }
-
-            .precioTarSelec {
-                margin: 1rem 0;
-                font-weight: 700;
-            }
-
-            .botonTarSelec {
-                width: 100%;
-                display: flex;
-                margin-top: auto;
-                .verBotonTarSelect {
-                    background-color: v.$c-identidad;
-                    color: v.$c-textoClaro;
-                    border: none;
-                    border-radius: 20px;
-                    padding: .8rem ;
-                    width: 100%;
-                    font-size: 1rem;
-                    cursor: pointer;
-                    text-align: center;
-                }
-            }
-        }
     }
 
     @media (max-width: 768px) {
